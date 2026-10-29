@@ -74,25 +74,18 @@ obj2.child2()
 
 ### hybrid inheritance 
 class A:
-
     def show_a(self):
         print("This is main class A")
 
-
 class B(A):
-
     def show_b(self):
         print("This is child1 of class A")
 
-
 class C(A):
-
     def show_c(self):
         print("This is child2 of class A")
 
-
 class D(B, C):
-
     def show_d(self):
         print("This is child of class B and class C")
 
@@ -103,3 +96,21 @@ obj.show_a()
 obj.show_b()
 obj.show_c()
 obj.show_d()
+
+##Polyamorphism
+class Animal:
+    def speak(self):
+        return "Some generic animal sound"
+
+class Dog(Animal):
+    def speak(self):
+        return "Bark!"
+
+class Cat(Animal):
+    def speak(self):
+        return "Meow!"
+
+animals = [Dog(), Cat(), Animal()]
+
+for animal in animals:
+    print(animal.speak())
